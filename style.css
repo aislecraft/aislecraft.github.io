@@ -1,0 +1,31 @@
+/* Aislecraft support site — palette follows the in-game Corner Shop theme (light and dark). */
+:root{--bg:#F5F1E6;--surface:#FFFCF5;--ink:#243F34;--muted:#5D695F;--accent:#2F6650;--amber:#E8B65B;--line:#243F341F;--tile:#F1DFC4;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#16251F;--surface:#22362D;--ink:#FFF5DE;--muted:#BFCEC2;--accent:#9BD4AA;--amber:#E9BA63;--line:#FFF5DE24;--tile:#3F4B37;color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding-inline:20px}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding-block:18px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:800 1.15rem/1 ui-rounded,"SF Pro Rounded",system-ui,sans-serif;letter-spacing:.02em}
+.brand i{display:grid;grid-template-columns:repeat(3,8px);gap:2px}
+.brand i b{width:8px;height:8px;border-radius:2px;background:var(--tile)}
+.brand i b:nth-child(2),.brand i b:nth-child(4){background:var(--amber)}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.95rem}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+main.wrap{padding-block:36px 56px}
+h1{font:800 clamp(2rem,6vw,2.9rem)/1.1 ui-rounded,"SF Pro Rounded",system-ui,sans-serif;margin:0 0 12px;text-wrap:balance}
+h2{font:700 1.3rem/1.25 ui-rounded,"SF Pro Rounded",system-ui,sans-serif;margin:36px 0 8px}
+p,li{max-width:66ch}
+.lede{font-size:1.1rem;color:var(--muted);margin-top:0}
+.meta{font-size:.9rem;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:24px 0}
+.card p{margin:.3rem 0}
+.mail{font-weight:700;user-select:all;overflow-wrap:anywhere}
+ul{padding-left:1.2rem}
+dl{margin:0}
+dt{font-weight:700;margin-top:18px}
+dd{margin:4px 0 0}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:20px;font-size:.9rem;color:var(--muted)}
